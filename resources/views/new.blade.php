@@ -7,6 +7,6 @@
     <title>New</title>
 </head>
 <body>
-    <h1>New</h1>
+    <h1>Test new</h1>
 </body>
 </html>
