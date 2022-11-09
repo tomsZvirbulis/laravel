@@ -12,11 +12,16 @@ class CityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id = null)
     {
-        $res = City::all();
+        $res = null;
+        if (!empty($id)) {
+            $res = City::where("city_id", $id)->get();
+        } else {
+            $res = City::all();
+        }
         // dd($res);
-        return view('cities', ['title'=>'City', 'cities'=>$res]);
+        return view('cities', ['title'=>'Cities', 'cities'=>$res]);
     }
 
     /**

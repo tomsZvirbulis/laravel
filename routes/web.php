@@ -23,3 +23,4 @@ Route::get('/actor/{id}', [ActorController::class, 'index']);
 Route::get('/actor', [ActorController::class, 'index']);
 
 Route::get('/cities', [CityController::class, 'index']);
+Route::get('/cities/{id}', [CityController::class, 'index']);

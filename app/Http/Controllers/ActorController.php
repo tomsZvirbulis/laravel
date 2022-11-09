@@ -14,7 +14,8 @@ class ActorController extends Controller
      */
     public function index($id = null)
     {
-        if ($id) {
+        $res = null;
+        if (!empty($id)) {
             $res = Actor::where("actor_id", $id)->get();
         } else {
             $res = Actor::all();
