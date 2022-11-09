@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/actor/{id}', [ActorController::class, 'index']);
 Route::get('/actor', [ActorController::class, 'index']);
 
 Route::get('/cities', [CityController::class, 'index']);

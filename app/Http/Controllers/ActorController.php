@@ -12,9 +12,13 @@ class ActorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id = null)
     {
-        $res = Actor::all();
+        if ($id) {
+            $res = Actor::where("actor_id", $id)->get();
+        } else {
+            $res = Actor::all();
+        }
         // dd($res);
         return view('actor', ['title'=>'Actor', 'actors'=>$res]);
     }
