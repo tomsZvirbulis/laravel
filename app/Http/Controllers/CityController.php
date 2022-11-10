@@ -20,7 +20,7 @@ class CityController extends Controller
     public function getCity($CountryId = null) {
         $res = null;
         if (!empty($CountryId)) {
-            $res = City::where("city_id", $CountryId)->get();
+            $res = City::where("country_id", $CountryId)->get();
         } else {
             $res = City::all();
         }
