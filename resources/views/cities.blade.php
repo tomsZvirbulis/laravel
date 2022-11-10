@@ -15,7 +15,7 @@
             @foreach ($cities as $city)
               <tr>
                 <td scope="col">{{$city->city_id}}</td>
-                <td scope="col">{{$city->city}}</td>
+                <td scope="col"><a href='country/{{$city->country_id}}'>{{$city->city}}</a></td>
                 <td scope="col">{{$city->country_id}}</td>
                 <td scope="col">{{$city->last_update}}</td>
               </tr>
