@@ -20,9 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/actor/{id}', [ActorController::class, 'index']);
-Route::get('/actor', [ActorController::class, 'index']);
+Route::get('home', function() {
+    return auth()->user();
+});
+// Route::get('/actor/{id}', [ActorController::class, 'index']);
+// Route::get('/actor', [ActorController::class, 'index']);
 
-Route::get('/cities/{CountryId?}', [CityController::class, 'getCity']);
+// Route::get('/cities/{CountryId?}', [CityController::class, 'getCity']);
 
-Route::get('/country/{CountryId}', [CountryController::class, 'index']);
+// Route::get('/country/{CountryId}', [CountryController::class, 'index']);
